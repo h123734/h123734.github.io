@@ -14,11 +14,49 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <style>
-    #banner {
-        height: 400px;
+    #title-pic1 {
+        height: 45vh;
         background-image: url(./images/banner1.jpg);
         background-position: center;
         background-size: cover;
+    }
+
+    #title-pic2 {
+        height: 45vh;
+        background-image: url(./images/banner4.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #title-pic3 {
+        height: 45vh;
+        background-image: url(./images/banner5.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #title-pic4 {
+        height: 45vh;
+        background-image: url(./images/banner6.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #title-pic5 {
+        height: 45vh;
+        background-image: url(./images/banner7.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .slide-arrow {
+        font-size: 8vh;
+        font-weight: 900;
+        opacity: 0.5;
+    }
+
+    .slide-arrow:hover {
+        opacity: 1.1;
     }
 </style>
 
@@ -40,40 +78,58 @@
             </div>
         </header>
         <div class="col p-0">
-            <div id="banner"></div>
+            <div id="pic-slide" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="title-pic1">
+                    </div>
+                    <div class="carousel-item" id="title-pic2">
+                    </div>
+                    <div class="carousel-item" id="title-pic3">
+                    </div>
+                    <div class="carousel-item" id="title-pic4">
+                    </div>
+                    <div class="carousel-item" id="title-pic5">
+                    </div>
+                    <a href="#pic-slide" class="carousel-control-prev" data-slide="prev" role="button">
+                        <span class="text-danger slide-arrow">
+                            < </span> </a> <a href="#pic-slide" class="carousel-control-next" data-slide="next">
+                                <span class="text-danger slide-arrow">>
+                                </span></a>
+                </div>
+            </div>
         </div>
-        <div>
 
-            <div class="row">
-                <div class="col-lg-4 offset-lg-2 col-md-6 my-5">
-                    <h1 class="h3 text-info">| 關於我們 About Us</h1>
-                    <small class="h6 text-secondary">創造美好的身體適能與擁有健康的人生。 </small>
-                    <ul class="text-success h6">
-                        <li class="m-4">獨家客製化訓練課程</li>
-                        <li class="m-4">教練均為合格驗證機構</li>
-                        <li class="m-4">採用大數據智慧分析體適能</li>
-                        <li class="m-4"> 專屬營養師提供建議清單</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6 my-5"><img src="./images/workout1.jpg" alt="" class=" img-thumbnail">
-                </div>
-                <div class="col-lg-4  offset-lg-2 col-md-6 my-5"><img src="./images/workout2.jpg" alt=""
-                        class=" img-thumbnail">
-                </div>
-                <div class="col-lg-4 col-md-6 my-5">
-                    <h1 class="h3 text-info">| 店家資訊 Shop Information</h1>
-                    <ul class="text-success">
-                        <li class="m-4">營業時間：12:00p.m. ~ 23:00p.m.</li>
-                        <li class="m-4">洽詢專線：03-3457678</li>
-                        <li class="m-4">店面地址：桃園市興中區養生路一段168號1樓</li>
-                    </ul>
-                </div>
+
+        <div class="row">
+            <div class="col-lg-4 offset-lg-2 col-md-6 my-5">
+                <h1 class="h3 text-info">| 關於我們 About Us</h1>
+                <small class="h6 text-secondary">創造美好的身體適能與擁有健康的人生。 </small>
+                <ul class="text-success h6">
+                    <li class="m-4">獨家客製化訓練課程</li>
+                    <li class="m-4">教練均為合格驗證機構</li>
+                    <li class="m-4">採用大數據智慧分析體適能</li>
+                    <li class="m-4"> 專屬營養師提供建議清單</li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col jumbotron jumbotron-fluid text-center bg-dark text-white m-0">GOPOWER FITNESS
-                    &copy;2019-</div>
+            <div class="col-lg-4 col-md-6 my-5"><img src="./images/workout1.jpg" alt="" class=" img-thumbnail">
+            </div>
+            <div class="col-lg-4  offset-lg-2 col-md-6 my-5"><img src="./images/workout2.jpg" alt=""
+                    class=" img-thumbnail">
+            </div>
+            <div class="col-lg-4 col-md-6 my-5">
+                <h1 class="h3 text-info">| 店家資訊 Shop Information</h1>
+                <ul class="text-success">
+                    <li class="m-4">營業時間：12:00p.m. ~ 23:00p.m.</li>
+                    <li class="m-4">洽詢專線：03-3457678</li>
+                    <li class="m-4">店面地址：桃園市興中區養生路一段168號1樓</li>
+                </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col jumbotron jumbotron-fluid text-center bg-dark text-white m-0">GOPOWER FITNESS
+                &copy;2019-</div>
+        </div>
+    </div>
 
     </div>
 

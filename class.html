@@ -13,9 +13,37 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <style>
-        #banner {
-            height: 400px;
+        #title-pic1 {
+            height: 45vh;
             background-image: url(./images/banner1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #title-pic2 {
+            height: 45vh;
+            background-image: url(./images/banner3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #title-pic3 {
+            height: 45vh;
+            background-image: url(./images/banner8.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #title-pic4 {
+            height: 45vh;
+            background-image: url(./images/banner9.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #title-pic5 {
+            height: 45vh;
+            background-image: url(./images/banner10.jpg);
             background-position: center;
             background-size: cover;
         }
@@ -58,7 +86,27 @@
             </div>
         </header>
         <div class="col p-0">
-            <div id="banner"></div>
+            <div id="pic-slide" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="title-pic1">
+                    </div>
+                    <div class="carousel-item" id="title-pic2">
+                    </div>
+                    <div class="carousel-item" id="title-pic3">
+                    </div>
+                    <div class="carousel-item" id="title-pic4">
+                    </div>
+                    <div class="carousel-item" id="title-pic5">
+                    </div>
+                    <a href="#pic-slide" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev">
+                        </span>
+                    </a>
+                    <a href="#pic-slide" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next">
+                        </span></a>
+                </div>
+            </div>
         </div>
         <div>
 
