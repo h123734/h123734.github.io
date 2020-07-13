@@ -11,6 +11,8 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
+
 	<title>GO Power</title>
 	<style>
 		body {
@@ -30,15 +32,26 @@
 			transition: all 0.8s;
 			transform: scale(1, 1);
 			background-color: rgb(240, 23, 23);
+			
+			
 		}
 
 		#area:hover {
 			transform: scale(0.8, 0.8);
 			background-color: rgba(255, 23, 23, 0.7);
 			cursor: pointer;
-
-
 		}
+		.col-md-4{animation-iteration-count:infinite;
+			animation-duration: 2s
+			}
+		footer{
+			position:fixed;
+			bottom:20px;
+			justify-content:center;
+			width:100%;
+		}
+		
+
 	</style>
 </head>
 <script>
@@ -54,7 +67,7 @@
 	<div class="container-fluid">
 		<!-- 第一列=導覽列 -->
 		<header class="fixed-top bg-dark">
-			<h1 class="pl-3 navbar-brand text-white font-weight-bold">Go Power</h1>
+			<h1 class="pl-3 navbar-brand text-white font-weight-bold"><a href="strong.html"style="text-decoration:none"> Go Power</a></h1>
 			<button class="navbar-toggler btn bg-info d-md-none float-right mr-5 mt-3 mb-2" data-toggle="collapse"
 				data-target="#submenu"><i class="fas fa-bars"></i></button>
 			<div id="submenu" class="collapse navbar-expand-md d-md-block float-md-right pr-5">
@@ -68,12 +81,28 @@
 		</header>
 		<!-- 第二列=廣告訊息 -->
 		<div class="row fixed-bottom mb-5">
-			<div class="col-md-4 offset-md-2 mb-5">
+			<div class="col-md-4 offset-md-2 mb-5 animated bounce" >
+				
 				<h1 class="h3 text-center text-white badge-pill border border-white mb-5" id="area" onclick="aa()">
 					限時活動優惠<br class=""><small class="h5">點選領取14天免費體驗</small></h1>
-			</div>
+			</div>	
+					
 		</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-white py-3">GOPOWER FITNESS
+                    &copy;2019
+    
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 	</div>
+
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
