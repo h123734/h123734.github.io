@@ -11,17 +11,24 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
 
 	<title>GO Power</title>
 	<style>
 		body {
-			background-image: url('images/banner2.jpg');
+			background-color: #666;
 			background-size: cover;
 			background-position: center top;
 			background-repeat: no-repeat;
 			font-family: microsoft jhengHei;
 			background-attachment: fixed;
+		}
+
+
+		.ad {
+			background-image: url('images/banner2.jpg');
+			height: 120vh;
 		}
 
 		header h1 {
@@ -32,8 +39,8 @@
 			transition: all 0.8s;
 			transform: scale(1, 1);
 			background-color: rgb(240, 23, 23);
-			
-			
+
+
 		}
 
 		#area:hover {
@@ -41,18 +48,24 @@
 			background-color: rgba(255, 23, 23, 0.7);
 			cursor: pointer;
 		}
-		.col-md-4{animation-iteration-count:infinite;
-			animation-duration: 2s
-			}
-		footer{
-			position:fixed;
-			bottom:20px;
-			justify-content:center;
-			width:100%;
-		}
-		
 
+		.col-md-4 {
+			animation-iteration-count: infinite;
+			animation-duration: 2s
+		}
+
+		.coupon1 img {
+			width: 100%;
+		}
+
+		footer {
+			position: fixed;
+			bottom: 10px;
+			justify-content: center;
+			width: 100%;
+		}
 	</style>
+
 </head>
 <script>
 	function aa() {
@@ -67,7 +80,8 @@
 	<div class="container-fluid">
 		<!-- 第一列=導覽列 -->
 		<header class="fixed-top bg-dark">
-			<h1 class="pl-3 navbar-brand text-white font-weight-bold"><a href="strong.html"style="text-decoration:none"> Go Power</a></h1>
+			<h1 class="pl-3 navbar-brand text-white font-weight-bold"><a href="strong.html"
+					style="text-decoration:none"> Go Power</a></h1>
 			<button class="navbar-toggler btn bg-info d-md-none float-right mr-5 mt-3 mb-2" data-toggle="collapse"
 				data-target="#submenu"><i class="fas fa-bars"></i></button>
 			<div id="submenu" class="collapse navbar-expand-md d-md-block float-md-right pr-5">
@@ -80,27 +94,35 @@
 			</div>
 		</header>
 		<!-- 第二列=廣告訊息 -->
-		<div class="row fixed-bottom mb-5">
-			<div class="col-md-4 offset-md-2 mb-5 animated bounce" >
-				
+		<div class="row mt-5  ad">
+			<div class="col-md-4 offset-md-1 mt-5  animated bounce">
+
 				<h1 class="h3 text-center text-white badge-pill border border-white mb-5" id="area" onclick="aa()">
 					限時活動優惠<br class=""><small class="h5">點選領取14天免費體驗</small></h1>
-			</div>	
-					
+			</div>
 		</div>
+		<div class="row coupon1">
+			<div class="col-12 text-center mb-5 p-0">
+				<!-- <h1>搭配振興券優惠</h1> -->
+				<img class=""
+					src="https://images.zi.org.tw/tel3c/2020/06/04124106/1591245665-d6553039dbd3a7540e47f2ba64d4fa92.jpg"
+					alt="">
+			</div>
+		</div>
+	</div>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue">
+	<!-- Footer -->
+	<footer class="page-footer font-small blue">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center text-white py-3">GOPOWER FITNESS
-                    &copy;2019
-    
-  </div>
-  <!-- Copyright -->
+		<!-- Copyright -->
+		<div class="footer-copyright text-center text-white py-3">GOPOWER FITNESS
+			&copy;2019
 
-</footer>
-<!-- Footer -->
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
 	</div>
 
 
