@@ -12,10 +12,33 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvLaV94fMWhaCohJOUJGyiYEa2N06GhQE&callback=initMap"> </script>
+    <script>
+
+        function initMap() {
+            var fit = {
+                lat: 24.963147,
+                lng: 121.216193
+            };
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: fit
+            });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: fit
+            });
+        }
+    </script>
 </head>
 <style>
-	body{font-family: microsoft jhengHei;}
+    body {
+        font-family: microsoft jhengHei;
+    }
+
     #title-pic1 {
         height: 45vh;
         background-image: url(./images/banner1.jpg);
@@ -61,16 +84,22 @@
         opacity: 1.1;
     }
 
-     header h1 {
-		text-shadow: 2px 2px 1px #666;
-		}
+    header h1 {
+        text-shadow: 2px 2px 1px #666;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+    }
 </style>
 
 
 <body class="bg-dark">
     <div class="container-fluid">
         <header class="fixed-top bg-dark">
-            <h1 class="pl-3 navbar-brand text-white font-weight-bold"><a href="strong.html"style="text-decoration:none"> Go Power</a></h1>
+            <h1 class="pl-3 navbar-brand text-white font-weight-bold"><a href="strong.html"
+                    style="text-decoration:none"> Go Power</a></h1>
             <button class="navbar-toggler btn bg-info d-md-none float-right mr-5 mt-3 mb-2" data-toggle="collapse"
                 data-target="#submenu"><i class="fas fa-bars"></i></button>
             <div id="submenu" class="collapse navbar-expand-md d-md-block float-md-right pr-5">
@@ -117,7 +146,8 @@
                     <li class="m-4"> 專屬營養師提供建議清單</li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6 my-5"><img src="./images/workout1.jpg" alt="" class="img-thumbnail animated fadeInDown">
+            <div class="col-lg-4 col-md-6 my-5"><img src="./images/workout1.jpg" alt=""
+                    class="img-thumbnail animated fadeInDown">
             </div>
             <div class="col-lg-4  offset-lg-2 col-md-6 my-5"><img src="./images/workout2.jpg" alt=""
                     class=" img-thumbnail animated fadeInDown">
@@ -130,9 +160,11 @@
                     <li class="m-4">店面地址：桃園市興中區養生路一段168號1樓</li>
                 </ul>
             </div>
+            <div id="map"></div>
         </div>
         <div class="row">
-            <div class="col jumbotron jumbotron-fluid text-center bg-dark text-white m-0 footer-copyright">GOPOWER FITNESS
+            <div class="col jumbotron jumbotron-fluid text-center bg-dark text-white m-0 footer-copyright">GOPOWER
+                FITNESS
                 &copy;2019</div>
         </div>
     </div>
