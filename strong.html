@@ -28,6 +28,10 @@
 
 		.ad {
 			background-image: url('images/banner2.jpg');
+			background-size: cover;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 			height: 120vh;
 		}
 
@@ -54,8 +58,18 @@
 			animation-duration: 2s
 		}
 
+		.coupon1 {
+			margin-right: 50%;
+		}
+
+		@media screen and (max-width: 768px) {
+			.coupon1 {
+				margin: 0;
+			}
+		}
+
 		.coupon1 img {
-			width: 100%;
+			width: 30%;
 		}
 
 		footer {
@@ -102,15 +116,16 @@
 				<h1 class="h3 text-center text-white badge-pill border border-white mb-5" id="area" onclick="aa()">
 					限時活動優惠<br class=""><small class="h5">點選領取14天免費體驗</small></h1>
 			</div>
-		</div>
-		<div class="row coupon1">
-			<div class="col-12 text-center mb-5 p-0">
-				<!-- <h1>搭配振興券優惠</h1> -->
-				<img class=""
-					src="https://images.zi.org.tw/tel3c/2020/06/04124106/1591245665-d6553039dbd3a7540e47f2ba64d4fa92.jpg"
-					alt="">
+			<div class="row coupon1">
+				<div class="col-12 text-center mb-5 p-0">
+					<h1 style="color: red">搭配振興券<br>3000優惠300元！</h1>
+					<img class=""
+						src="https://images.zi.org.tw/tel3c/2020/06/04124106/1591245665-d6553039dbd3a7540e47f2ba64d4fa92.jpg"
+						alt="">
+				</div>
 			</div>
 		</div>
+
 	</div>
 
 	<!-- Footer -->
