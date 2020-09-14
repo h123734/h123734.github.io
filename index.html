@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css' />
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/aee263598f/UntitledProject/style.css">
+    <meta charset="utf-8">
+    <title>My html5 Document</title>
+    <script>
+        // $(".header a").on("click", function () {
+        //     $(".subscrib").removeClass("btnimg").addClass("btnimgac");
+        // });
+    </script>
+    <style>
+        body {
+            max-width: 100%;
+        }
+
+        body .row {
+            max-width: width 100vw;
+
+        }
+
+        .logo {
+            width: 11vw;
+            margin-top: 12px;
+        }
+
+        .subscrib {
+            position: absolute;
+            right: 0px;
+        }
+
+        .btnimg {
+            height: 30px;
+            margin-top: 9px;
+            margin-right: 5px;
+        }
+
+        .btnimgac {
+            display: none;
+            width: 40%;
+            margin-top: 9px;
+        }
+
+        .nav li a {
+            margin: 1px 12px 5px 8px;
+            padding: 1px 12px 5px 8px;
+            color: black;
+            text-align: center;
+            align-self: center;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .dropdown-menu li {
+            color: black;
+            background-color: gray;
+            font-size: 20px;
+
+
+        }
+
+        /* 新聞分類 */
+        .newscate {
+            font-size: 16px;
+            color: black;
+            font-weight: 800;
+            border-left: 8px red solid;
+            padding: 4px 1px 4px 5px;
+        }
+
+        /* 標題 */
+        .title {
+            color: rgb(49, 49, 49);
+            font-weight: 700;
+            padding: 12px 0px 10px 0px;
+        }
+
+        /* 新聞來源 */
+        .sources {
+            color: rgb(255, 28, 11);
+            font-family: Microsoft JhengHei;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        /* 追蹤按鈕 */
+        .follow {
+            border: 1px solid;
+            border-color: rgb(202, 202, 202);
+            border-radius: 5px;
+            padding: 3px 12px;
+            font-family: Microsoft JhengHei;
+            font-weight: 600;
+            font-size: 16px;
+            margin-left: 10px;
+            background-color: white
+        }
+
+        /* 日期 */
+        .time {
+            color: rgb(112, 112, 112);
+            font-weight: 550;
+        }
+
+        /* 人氣 */
+        .popular {
+            color: rgb(170, 169, 169);
+            font-weight: 800;
+        }
+
+        /* 贊助 */
+        .donate {
+            background-color: rgba(238, 108, 33, 0.932);
+            color: white;
+            border-radius: 5px;
+            padding: 1px 12px;
+            font-family: Microsoft JhengHei;
+            margin-left: 5px;
+            font-weight: 600;
+        }
+
+        .icon-coffee {
+            padding-right: 5px;
+            font-size: 20px;
+        }
+
+        /* 簡繁轉換 */
+
+        .simp {
+            background-image: url(https://www.storm.mg/images/chs.png);
+            display: inline-block;
+            font-size: 0;
+            height: 30px;
+            /*圖片高度*/
+            width: 30px;
+            /*圖片寬度*/
+            background-attachment: cover;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+
+        .simp:hover {
+            background-image: url(https://www.storm.mg/images/chs_hover.png);
+        }
+
+        /* 圖片 */
+        .pic {
+            width: 100%;
+        }
+
+        /* 圖片解說 */
+        .pictext {
+            margin: 0px;
+            padding: 10px;
+            width: 800px;
+            height: 80px;
+            color: rgb(154, 154, 154);
+            font-family: Microsoft JhengHei;
+        }
+
+        @media (min-width: 768px) {
+            .pictext {
+                width: 60vw;
+            }
+        }
+
+        @media (min-width:256px) {
+            .pictext {
+                width: 100%;
+            }
+        }
+
+        /* 新聞內容 */
+        .news {
+            color: rgb(99, 98, 98);
+            padding: 20px 60px 0px 60px;
+
+            font-size: 18px;
+            background-color: white;
+            font-weight: 600;
+
+        }
+
+        .headword {
+            border-bottom: red 3px solid;
+            display: inline-block;
+            color: rgb(99, 98, 98);
+            margin: 0px;
+            width: 35px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .news p {
+            padding-top: 30px;
+
+            display: inline-block;
+        }
+
+        .news h3 {
+            color: rgb(247, 52, 52);
+            padding-top: 30px;
+            font-weight: 600;
+        }
+
+        /* 相關報導 */
+        .anolink {
+            color: rgb(175, 175, 175);
+        }
+
+        .anolink a {
+            text-decoration: none;
+            color: rgb(175, 175, 175);
+            border-bottom: 1px solid orange;
+        }
+
+        /* 更多報導 */
+        .more {
+            font-weight: 800;
+            padding-left: 30px;
+            font-size: 18px;
+            color: rgb(48, 48, 48);
+        }
+
+        .more a {
+            color: rgb(245, 66, 66);
+            font-weight: lighter;
+        }
+
+        .sidebar {
+            border-top: 3px black solid;
+            border-bottom: 3px black solid;
+            height: 270px;
+            padding-left: 0px;
+            width: 300px;
+        }
+
+        .hot {
+            color: red;
+            font-family: Microsoft JhengHei;
+            font-weight: 550;
+            margin: 12px 0px;
+        }
+
+        .hotnum {
+            display: block;
+            font-family: Microsoft JhengHei;
+            width: 30px;
+            height: 50px;
+            font-size: 25px;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            color: red;
+        }
+
+
+
+        .hotnews {
+            color: black;
+            font-family: Microsoft JhengHei;
+            font-weight: 550;
+            display: inline-block;
+            position: relative;
+            left: 50px;
+        }
+
+        .hottitle {
+            color: #000;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<!-- 新聞原始網址:https://www.storm.mg/article/2302778 -->
+
+<body style="font-family:Microsoft JhengHei ;margin: 0px ;  background-color: #eeeeee;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="header">
+                    <div class="text-center">
+                        <img src="https://www.storm.mg/images/logo.svg" alt="" class="logo ">
+                        <a href="https://www.storm.mg/premium/wsj-plan" class="subscrib" style="display: inline-block">
+                            <img src="https://www.storm.mg/images/premium/wsj_red_btn.png" alt="" class="btnimg">
+                            <img src="https://www.storm.mg/images/premium/wsj_red_btn_active.png" alt=""
+                                class="btnimgac">
+                        </a></div>
+                    <hr color="black" size="10">
+                    <ul class="nav nav-tabs" style="padding-bottom: 12px;border-bottom: rgb(180, 179, 179) 1px solid">
+                        <li class="">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">新聞<span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/articles">新聞總覽</a></li>
+                                <li><a href="https://www.storm.mg/category/118">政治</a></li>
+                                <li><a href="https://www.storm.mg/category/117">國際</a></li>
+                                <li><a href="https://www.storm.mg/category/26644">軍事</a></li>
+                                <li><a href="https://www.storm.mg/category/22172">國內</a></li>
+                                <li><a href="https://www.storm.mg/category/121">中港澳</a></li>
+                                <li><a href="https://www.storm.mg/history">歷史</a></li>
+                                <li><a href="https://www.storm.mg/category/24667">調查</a></li>
+                                <li><a href="https://www.storm.mg/category/36948">風數據</a></li>
+                                <li><a href="https://www.storm.mg/category/118606">運動</a></li>
+                                <li><a href="https://www.storm.mg/polls">風民調</a></li>
+                                <li><a href="https://www.storm.mg/localarticles">地方新聞</a></li>
+                                <li><a href="https://www.storm.mg/video">風影音</a></li>
+                                <li><a href="https://www.storm.mg/category/965">公民運動</a></li>
+                                <li><a href="https://www.storm.mg/category/25421">風攝影</a></li>
+                                <li><a href="https://www.storm.mg/category/22168">公共政策</a></li>
+                                <li><a
+                                        href="https://www.storm.mg/article/110488?utm_source=storm.mg&utm_medium=header_link&utm_campaign=lylive">立院直播</a>
+                                </li>
+                                <li><a href="https://www.storm.mg/category/175031">VIP專文</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">評論 <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/all-comment">評論總覽</a></li>
+                                <li><a href="https://www.storm.mg/category/88880">風評</a></li>
+                                <li><a href="https://www.storm.mg/category/88881">專欄</a></li>
+                                <li><a href="https://www.storm.mg/category/992">投書</a></li>
+                                <li><a href="https://www.storm.mg/category/23440">風書房</a></li>
+                                <li><a href="https://www.storm.mg/culture">文化</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">財經<span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/category/23083"></a>重磅財經</li>
+                                <li><a href="https://www.storm.mg/category/164654"></a>下班經濟學</li>
+                                <li><a href="https://www.storm.mg/category/171276"></a>科技冷戰</li>
+                                <li><a href="https://www.storm.mg/category/172486"></a>1% Style</li>
+                                <li><a href="https://www.storm.mg/category/135700"></a>房地產</li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">生活<span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/lifestyles">風生活</a></li>
+                                <li><a href="https://www.storm.mg/category/36291">職場</a></li>
+                                <li><a href="https://www.storm.mg/life-category/s24255">旅遊</a></li>
+                                <li><a href="https://www.storm.mg/life-category/s24253">美食</a></li>
+                                <li><a href="https://www.storm.mg/life-category/s24252">健康</a></li>
+                                <li><a href="https://www.storm.mg/stylish-category">品味生活</a></li>
+                                <li><a href="https://www.storm.mg/technology">科技</a></li>
+                                <li><a href="https://www.storm.mg/life-category/s24270">娛樂</a></li>
+                                <li><a href="https://www.storm.mg/life-category/s47503">居家</a></li>
+                                <li><a href="https://www.storm.mg/life-category/s47030">汽車</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">人物<span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/category/171151">重磅專訪</a></li>
+                                <li><a href="https://www.storm.mg/category/164657">名人真心話</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">專題<span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/event">專題新聞</a></li>
+                                <li><a
+                                        href="https://www.storm.mg/category/k161499?utm_source=storm.mg&utm_medium=header_link&utm_campaign=marriage_equal">解密台灣</a>
+                                </li>
+                                <li><a href="https://www.storm.mg/stormcafe/featured-topics">嚴選專題</a></li>
+                                <li><a href="https://www.storm.mg/stormcafe/hot-donate">贊助排行榜</a></li>
+                                <li><a href="https://www.storm.mg/special-campaign">特別企劃</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">華爾街日報<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="https://www.storm.mg/category/173479">華爾街日報選文</a></li>
+                                <li><a href="https://www.storm.mg/wsj"><img
+                                            src="https://www.storm.mg/images/premium/wsj_menu_mobile.png" alt=""> </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 新新聞 -->
+                        <li style="margin: -3px 0px 0px 0px"><a href="https://www.storm.mg/category/87726">
+                                <img src="https://www.storm.mg/images/logo_new7.svg" alt="" width="50px"> </a>
+                        </li>
+                        <li><a href="#" style="color: red">武漢肺炎</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style=" margin-top:15px">
+
+            <div class="col-12">
+                <br>
+                <a href="https://www.storm.mg/category/22172" class="newscate"> 國內</a>
+                <h2 class="title">不用搶，防疫酒精來囉！藥師公會：本周起健保藥局開賣，每瓶40元 </h2>
+                <a href="https://www.storm.mg/authors/49552/%E4%B8%AD%E5%A4%AE%E7%A4%BE" class="sources">中央社</a>
+                <span><button class="follow"> + 追蹤</button></span> <span class="time">　2020-02-17
+                    20:51</span>
+                <span class="popular"> 34057人氣</span>
+                <span><a href="https://www.storm.mg/donate/article/2302778/checkout" class="btn donate"><i
+                            class="align-items-center"></i><span class="icon-coffee"></span> 贊助本文</a>
+                </span>
+                <span> <a href="#" class="simp btn"></a> </span>
+
+            </div>
+        </div> <br>
+        <div class="row ">
+            <div class="col-md-9 col-12" style="padding-right:15px">
+                <img src="https://image.cache.storm.mg/styles/smg-800x533-fp-wm/s3/media/image/2020/02/14/20200214-033700_U4040_M591970_a97c.jpg?itok=CUPqQMVV"
+                    alt="" class="pic">
+                <p class="pictext"><b> 藥師公會全聯會17日宣布，本周起全台6000多家健保藥局將販售防疫酒精，每瓶300ml、售價40元，盼人人都有酒精可用。（資料照，顏麟宇攝）
+                    </b></p>
+                <div class="news">
+
+                    <h1 class="headword">新</h1>
+                    冠肺炎疫情延燒，不只口罩，就連消毒酒精都被搶購一空。藥師公會全聯會17日宣布，本周起全台6000多家健保藥局將販售防疫酒精，每瓶300ml、售價40元，盼人人都有酒精可用。
+
+
+                    <p>中華民國藥師公會全國聯合會理事長黃金舜接受中央社記者訪問表示，新冠肺炎疫情延燒，國內廠商生產的75%消毒用酒精大多優先供應醫療機構，藥局普遍已缺貨達2至3周，但眼看開學在即，民眾詢問度相當高，希望能趕緊買到酒精替孩子的用品消毒。
+                    </p>
+                    <h3> 每間藥局每周平均可拿到72瓶</h3>
+                    <p>為解決民眾需求，行政院指示國營事業台灣菸酒公司和台糖加入生產75%消毒用酒精行列。黃金舜說，酒精不像口罩消耗量這麼大，小小一瓶可用很長一段時間，卻是很必須的防疫用品，經全聯會和食藥署協商，決議配送防疫酒精至全台6000多家健保特約藥局，供民眾購買使用。
+                    </p>
+
+                    <p>黃金舜指出，防疫酒精預計由中華郵政協助配送，這周起陸續配送至全台特約藥局，每間藥局每周平均可拿到72瓶，每瓶300ml、售價新台幣40元，將由社區藥局訂定限購措施，一方面避免民眾囤貨，另一方面也要避免72瓶在到貨當天就搶光，盡可能讓每個民眾都能買到酒精。
+                    </p>
+
+                    <h3> 黃金舜：建議政府及早規劃紗布、棉花棒後續供貨來源</h3>
+                    <p>此外，根據社區藥局販售口罩經驗，北部地區口罩天天搶購一空，但南部卻賣不完，預期未來酒精可能也會出現類似狀況，因此先賣個幾天後，會進一步掌握各地需求，調整供給量，讓大家都有得用。
+                    </p>
+
+                    <p>黃金舜也建議政府及早規劃紗布、棉花棒後續供貨來源，他強調，以往台灣使用紗布、棉花棒大多仰賴中國，如今中國受疫情影響，產量也大受影響，呼籲未雨綢繆，避免醫療院所陷入缺貨窘境。
+                        <span class="anolink">（相關報導： <a
+                                href="https://www.storm.mg/article/2301530">「2個中國人生的小孩只要依親就享健保！」486先生爆：馬英九制定的？</a>｜<a
+                                href="javascript:void(0);">更多文章</a>） </span>
+                        <p>
+                </div>
+                <div class="more">
+                    <p>看更多【新冠肺炎疫情】最新報導：<a href="http://bit.ly/36PGP2b">http://bit.ly/36PGP2b</a> </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-12">
+                <div class="sidebar">
+                    <h5 class="hot"> 現 正 熱 映 中</h5>
+
+                    <iframe id="smg_live_video" class="smg_live_video embed-responsive-item "
+                        src="https://www.youtube.com/embed/3NcaCn1znUg?autoplay=&amp;mute=1&amp;version=3&amp;loop=1&amp;playlist=3NcaCn1znUg"
+                        height="200" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+                <div>
+                    <h5 class="hot">熱門新聞</h5>
+                    <hr>
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/article/2367010" class="hotnum"> <span>1</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/article/2367010" class="hottitle"
+                                title="高虹安秀出「口罩銷售地圖系統」　陳時中驚訝問一句笑翻台下立委">
+                                <p class="hottitle">
+                                    高虹安秀出「口罩銷售地圖系統」　陳時中驚訝問一句笑翻台下立委/p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/1870/%E6%BD%98%E7%B6%AD%E5%BA%AD"
+                                    style="color:red">潘維庭</a></p>
+                        </div>
+                    </div>
+
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/article/2371215" class="hotnum"> <span>2</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/article/2371215" class="hottitle"
+                                title="台灣防疫為何成功？李龍騰：世界各國只有台灣不相信WHO給的錯誤訊息">
+                                <p class="hottitle">
+                                    台灣防疫為何成功？李龍騰：世界各國只有台灣不相信WHO給的錯誤訊息</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/175368/%E6%96%B9%E8%8E%89%E5%A9%B7"
+                                    style="color:red">方莉婷</a></p>
+                        </div>
+                    </div>
+
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/lifestyle/368304" class="hotnum"> <span>3</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/lifestyle/368304" class="hottitle"
+                                title="不知道就不知道，何必不懂裝懂？法國老師一場震撼教育，犀利拆穿亞洲人的慣性謊言！">
+                                <p class="hottitle">
+                                    不知道就不知道，何必不懂裝懂？法國老師一場震撼教育，犀利拆穿亞洲人的慣性謊言！</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/110860/%E5%A4%A7%E7%94%B0%E5%87%BA%E7%89%88"
+                                    style="color:red">大田出版</a></p>
+                        </div>
+                    </div>
+
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/article/2359743" class="hotnum"> <span>4</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/article/2359743" class="hottitle"
+                                title="台灣2月仍出口千萬片口罩！經濟部指出原因是這個？">
+                                <p class="hottitle">
+                                    台灣2月仍出口千萬片口罩！經濟部指出原因是這個？</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/161288/%E9%99%B3%E5%A5%95%E5%AE%89"
+                                    style="color:red">陳奕安</a></p>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/lifestyle/2087481" class="hotnum"> <span>5</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/lifestyle/2087481" class="hottitle"
+                                title="曾是人人稱羨的微軟員工，卻一夜之間變街友...他揭開這群被矽谷淘汰的失敗者悲歌">
+                                <p class="hottitle">
+                                    曾是人人稱羨的微軟員工，卻一夜之間變街友...他揭開這群被矽谷淘汰的失敗者悲歌</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/175972/%E6%96%B9%E6%A0%BC%E5%AD%90+Vocus"
+                                    style="color:red">方格子 Vocus</a></p>
+                        </div>
+                    </div>
+
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/lifestyle/2372714" class="hotnum"> <span>6</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/lifestyle/2372714" class="hottitle"
+                                title="經濟部長幫忙搬機台、工程師席地吃便當...殷琦PO現場15張照片，網友全哭了">
+                                <p class="hottitle">
+                                    經濟部長幫忙搬機台、工程師席地吃便當...殷琦PO現場15張照片，網友全哭了</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/186142/%E9%A2%A8%E7%94%9F%E6%B4%BB%E7%B6%9C%E5%90%88%E5%A0%B1%E5%B0%8E"
+                                    style="color:red">風生活綜合報導</a></p>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/lifestyle/1868350" class="hotnum"> <span>7</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/lifestyle/1868350" class="hottitle"
+                                title="出門擦香水已成習慣？小心！在這八個場合擦香水，不僅沒sense，甚至有生命危險！">
+                                <p class="hottitle">
+                                    出門擦香水已成習慣？小心！在這八個場合擦香水，不僅沒sense，甚至有生命危險！</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/170206/%E6%9F%AF%E7%BF%8E%E8%82%87"
+                                    style="color:red">柯翎肇</a></p>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/article/2375025" class="hotnum"> <span>8</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/article/2375025" class="hottitle"
+                                title="防疫指揮誰最行？柯文哲：只有「這位」比陳時中厲害，我去指揮也不會太差">
+                                <p class="hottitle">
+                                    防疫指揮誰最行？柯文哲：只有「這位」比陳時中厲害，我去指揮也不會太差</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/49552/%E4%B8%AD%E5%A4%AE%E7%A4%BE"
+                                    style="color:red">中央社</a></p>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/article/2382859" class="hotnum"> <span>9</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/article/2382859" class="hottitle" title="新新聞》一九九五年，當唐鳳還是唐宗漢時">
+                                <p class="hottitle">
+                                    新新聞》一九九五年，當唐鳳還是唐宗漢時</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/186740/%E6%96%B0%E6%96%B0%E8%81%9E%E8%AC%9D%E9%87%91%E8%93%89"
+                                    style="color:red">新新聞謝金蓉</a></p>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class=" text-center">
+                            <a href="https://www.storm.mg/article/2362657" class="hotnum"> <span>10</span></a>
+                        </div>
+                        <div class="hotnews">
+                            <a href="https://www.storm.mg/article/2362657" class="hottitle"
+                                title="南韓要求北韓停射飛彈，金正恩胞妹回嗆「低能蠢貨」：你們跟美國買武器、聯合軍演，卻不讓我們練兵">
+                                <p class="hottitle">
+                                    南韓要求北韓停射飛彈，金正恩胞妹回嗆「低能蠢貨」：你們跟美國買武器、聯合軍演，卻不讓我們練兵</p>
+                            </a>
+                            <p> <a href="https://www.storm.mg/authors/58496/%E5%9C%8B%E9%9A%9B%E4%B8%AD%E5%BF%83"
+                                    style="color:red">國際中心</a></p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <h2 class="bg-danger text-center">試作CSS的練習,拿風傳媒的素材來弄的,目前尚可支援手機,還有須改進的地方 原新聞網址在這裡
+        https://www.storm.mg/article/2302778 </h2>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
